@@ -1,15 +1,7 @@
-// Français : Composant d'affichage d'un produit
-// English: Product display component
-// Español: Componente de visualización de producto
-// Deutsch: Produktanzeigekomponente
-// Italiano: Componente di visualizzazione prodotto
+// French/English: Carte de produit / Product card
 
 function CarteProduit({nom, prix, stock}) {
-  // Français : Détermination du statut de stock
-  // English: Determining stock status
-  // Español: Determinación del estado de stock
-  // Deutsch: Bestimmung des Lagerbestandsstatus
-  // Italiano: Determinazione dello stato delle scorte
+  // FR: Statut du stock / EN: Stock status
   const disponibilite = stock > 0 ? 'En stock' : 'Rupture';
   const couleurDispo = stock > 0 ? 'green' : 'red';
 
