@@ -1,17 +1,9 @@
-// Français : Tests d'intégration pour le composant CompteurClics
-// English: Integration tests for the CompteurClics component
-// Español: Pruebas de integración para el componente CompteurClics
-// Deutsch: Integrationstests für die CompteurClics-Komponente
-// Italiano: Test di integrazione per il componente CompteurClics
+// French/English: Tests d'intégration / Integration tests
 
 import { render, screen, fireEvent } from '@testing-library/react';
 import CompteurClics from './CompteurClics';
 
-// Français : Teste l'incrémentation du compteur
-// English: Tests counter incrementation
-// Español: Prueba la incrementación del contador
-// Deutsch: Testet die Zählererhöhung
-// Italiano: Testa l'incremento del contatore
+// FR: Test d'incrémentation / EN: Increment test
 test('le compteur augmente après chaque clic', () => {
   render(<CompteurClics />);
   
@@ -21,11 +13,7 @@ test('le compteur augmente après chaque clic', () => {
   expect(screen.getByText('Nombre de clics : 1')).toBeInTheDocument();
 });
 
-// Français : Teste l'affichage du message après 5 clics
-// English: Tests message display after 5 clicks
-// Español: Prueba la visualización del mensaje después de 5 clics
-// Deutsch: Testet die Nachrichtenanzeige nach 5 Klicks
-// Italiano: Testa la visualizzazione del messaggio dopo 5 clic
+// FR: Test du message après 5 clics / EN: Message after 5 clicks test
 test('affiche un message après 5 clics', () => {
   render(<CompteurClics />);
   
