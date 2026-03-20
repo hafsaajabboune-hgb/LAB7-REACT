@@ -1,17 +1,9 @@
-// Français : Tests pour le composant FormulaireInscription
-// English: Tests for the FormulaireInscription component
-// Español: Pruebas para el componente FormulaireInscription
-// Deutsch: Tests für die FormulaireInscription-Komponente
-// Italiano: Test per il componente FormulaireInscription
+// French/English: Tests du formulaire / Form tests
 
 import { render, screen, fireEvent } from '@testing-library/react';
 import FormulaireInscription from './FormulaireInscription';
 
-// Français : Test de validation du champ email vide
-// English: Test for empty email field validation
-// Español: Prueba de validación de campo de correo vacío
-// Deutsch: Test der Validierung eines leeren E-Mail-Feldes
-// Italiano: Test di validazione del campo email vuoto
+// FR: Test email vide / EN: Empty email test
 test('affiche une erreur quand le champ email est vide', () => {
   render(<FormulaireInscription />);
   
@@ -21,11 +13,7 @@ test('affiche une erreur quand le champ email est vide', () => {
   expect(screen.getByText('Veuillez entrer une adresse email valide')).toBeInTheDocument();
 });
 
-// Français : Test de validation du mot de passe trop court
-// English: Test for too short password validation
-// Español: Prueba de validación de contraseña demasiado corta
-// Deutsch: Test der Validierung eines zu kurzen Passworts
-// Italiano: Test di validazione della password troppo corta
+// FR: Test mot de passe trop court / EN: Short password test
 test('affiche une erreur quand le mot de passe est trop court', () => {
   render(<FormulaireInscription />);
   
@@ -41,11 +29,7 @@ test('affiche une erreur quand le mot de passe est trop court', () => {
   expect(screen.getByText('Le mot de passe doit contenir au moins 6 caracteres')).toBeInTheDocument();
 });
 
-// Français : Test de validation de la correspondance des mots de passe
-// English: Test for password matching validation
-// Español: Prueba de validación de coincidencia de contraseñas
-// Deutsch: Test der Validierung der Passwortübereinstimmung
-// Italiano: Test di validazione della corrispondenza delle password
+// FR: Test non-correspondance / EN: Mismatch test
 test('affiche une erreur quand les mots de passe ne correspondent pas', () => {
   render(<FormulaireInscription />);
   
@@ -63,11 +47,7 @@ test('affiche une erreur quand les mots de passe ne correspondent pas', () => {
   expect(screen.getByText('Les mots de passe ne correspondent pas')).toBeInTheDocument();
 });
 
-// Français : Test de réussite du formulaire avec données valides
-// English: Test for successful form submission with valid data
-// Español: Prueba de envío exitoso del formulario con datos válidos
-// Deutsch: Test der erfolgreichen Formularübermittlung mit gültigen Daten
-// Italiano: Test di invio riuscito del modulo con dati validi
+// FR: Test succès / EN: Success test
 test('affiche un message de succes quand le formulaire est valide', () => {
   render(<FormulaireInscription />);
   
