@@ -1,3 +1,5 @@
+// French/English: Composant principal / Main component
+
 import TransformationDemo from './TransformationDemo';
 import BoutonSurveillé from './BoutonSurveillé';
 import ListePersonnes from './ListePersonnes';
@@ -19,17 +21,20 @@ function App() {
         Atelier React - Exercices pratiques
       </h1>
       
+      {/* FR: Section JSX / EN: JSX Section */}
       <section style={{marginBottom: '40px'}}>
         <h2 style={{color: '#0066cc'}}>Partie 1 - Demonstration JSX</h2>
         <TransformationDemo />
       </section>
 
+      {/* FR: Section HOC / EN: HOC Section */}
       <section style={{marginBottom: '40px'}}>
         <h2 style={{color: '#0066cc'}}>Partie 2 - Higher-Order Component</h2>
         <BoutonSurveillé texte="Cliquez pour tester" />
         <ProduitAvecHorodatage nom="Ordinateur portable" prix={899} stock={5} />
       </section>
 
+      {/* FR: Section Render Props / EN: Render Props Section */}
       <section style={{marginBottom: '40px'}}>
         <h2 style={{color: '#0066cc'}}>Partie 3 - Render Props</h2>
         
@@ -71,6 +76,7 @@ function App() {
         </FiltreArticles>
       </section>
 
+      {/* FR: Section Tests / EN: Tests Section */}
       <section style={{marginBottom: '40px'}}>
         <h2 style={{color: '#0066cc'}}>Partie 4 - Tests et formulaire</h2>
         
@@ -95,6 +101,7 @@ function App() {
         </div>
       </section>
 
+      {/* FR: Pied de page / EN: Footer */}
       <footer style={{
         marginTop: '50px',
         padding: '20px',
