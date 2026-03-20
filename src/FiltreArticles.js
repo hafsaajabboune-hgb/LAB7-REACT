@@ -1,24 +1,12 @@
-// Français : Composant avec Render Props pour filtrer une liste d'articles
-// English: Component with Render Props to filter a list of articles
-// Español: Componente con Render Props para filtrar una lista de artículos
-// Deutsch: Komponente mit Render Props zum Filtern einer Artikelliste
-// Italiano: Componente con Render Props per filtrare un elenco di articoli
+// French/English: Filtre d'articles avec Render Props / Article filter with Render Props
 
 import { useState } from 'react';
 
 function FiltreArticles({children}) {
-  // Français : État pour la catégorie sélectionnée
-  // English: State for the selected category
-  // Español: Estado para la categoría seleccionada
-  // Deutsch: Zustand für die ausgewählte Kategorie
-  // Italiano: Stato per la categoria selezionata
+  // FR: État pour la catégorie / EN: Category state
   const [categorieSelectionnee, setCategorieSelectionnee] = useState('tous');
   
-  // Français : Données des articles
-  // English: Articles data
-  // Español: Datos de los artículos
-  // Deutsch: Artikeldaten
-  // Italiano: Dati degli articoli
+  // FR: Données des articles personnalisés / EN: Custom articles data
   const articles = [
     {id: 1, nom: 'Téléphone Hafsa', categorie: 'telephonie', prix: 899},
     {id: 2, nom: 'Ordinateur Fatima', categorie: 'informatique', prix: 599},
@@ -28,18 +16,10 @@ function FiltreArticles({children}) {
     {id: 6, nom: 'Chargeur Fatima', categorie: 'telephonie', prix: 29}
   ];
 
-  // Français : Extraction des catégories uniques
-  // English: Extraction of unique categories
-  // Español: Extracción de categorías únicas
-  // Deutsch: Extraktion eindeutiger Kategorien
-  // Italiano: Estrazione delle categorie uniche
+  // FR: Catégories uniques / EN: Unique categories
   const categories = ['tous', ...new Set(articles.map(a => a.categorie))];
 
-  // Français : Filtrage des articles selon la catégorie sélectionnée
-  // English: Filtering articles according to the selected category
-  // Español: Filtrado de artículos según la categoría seleccionada
-  // Deutsch: Filtern von Artikeln nach der ausgewählten Kategorie
-  // Italiano: Filtraggio degli articoli in base alla categoria selezionata
+  // FR: Filtrage des articles / EN: Filtering articles
   const articlesFiltres = categorieSelectionnee === 'tous' 
     ? articles 
     : articles.filter(a => a.categorie === categorieSelectionnee);
@@ -53,11 +33,7 @@ function FiltreArticles({children}) {
     }}>
       <h3>Catalogue d'articles</h3>
       
-      {/* Français: Interface de filtrage */}
-      {/* English: Filtering interface */}
-      {/* Español: Interfaz de filtrado */}
-      {/* Deutsch: Filteroberfläche */}
-      {/* Italiano: Interfaccia di filtraggio */}
+      {/* FR: Interface de filtrage / EN: Filtering interface */}
       <div style={{marginBottom: '20px'}}>
         <label htmlFor="categorie" style={{marginRight: '10px'}}>Filtrer par categorie :</label>
         <select 
@@ -78,11 +54,7 @@ function FiltreArticles({children}) {
         </select>
       </div>
 
-      {/* Français: Passage des données filtrées à la fonction children */}
-      {/* English: Passing filtered data to the children function */}
-      {/* Español: Paso de datos filtrados a la función children */}
-      {/* Deutsch: Übergabe gefilterter Daten an die children-Funktion */}
-      {/* Italiano: Passaggio dei dati filtrati alla funzione children */}
+      {/* FR: Passage des données à children / EN: Passing data to children */}
       {children({
         articles: articlesFiltres,
         total: articlesFiltres.length
