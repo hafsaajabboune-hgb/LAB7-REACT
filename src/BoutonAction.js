@@ -1,15 +1,7 @@
-// Français : Composant de bouton réutilisable
-// English: Reusable button component
-// Español: Componente de botón reutilizable
-// Deutsch: Wiederverwendbare Button-Komponente
-// Italiano: Componente pulsante riutilizzabile
+// French/English: Composant bouton réutilisable / Reusable button component
 
 function BoutonAction(props) {
-  // Français : Style inline pour le bouton
-  // English: Inline styles for the button
-  // Español: Estilos en línea para el botón
-  // Deutsch: Inline-Stile für den Button
-  // Italiano: Stili inline per il pulsante
+  // FR: Style inline / EN: Inline styles
   return <button style={{padding: '10px', margin: '5px'}}>{props.texte}</button>;
 }
 
